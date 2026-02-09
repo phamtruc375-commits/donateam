@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danh sách thành viên - Blue Style</title>
+    <style>
+        :root {
+            --bg-color: #E3F2FD;
+            --card-bg: #ffffff;
+            --primary-blue: #2196F3;
+            --dark-blue: #0D47A1;
+            --text-gray: #555;
+            --accent-blue: #BBDEFB;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        .content {
+            width: 90%;
+            max-width: 600px;
+            text-align: center;
+        }
+
+        /* Tiêu đề giống trong ảnh */
+        .header-title {
+            color: #1B5E20; /* Giữ màu xanh lá đậm cho chữ nếu muốn, hoặc đổi sang var(--dark-blue) */
+            color: var(--dark-blue);
+            font-size: 24px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 40px;
+        }
+
+        /* Bố cục Box giống trong ảnh */
+        .box {
+            background: var(--card-bg);
+            border-radius: 15px;
+            margin-bottom: 20px;
+            display: flex;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            position: relative;
+        }
+
+        .box:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Thanh màu bên trái có chữ "box" xoay dọc */
+        .side-bar {
+            background-color: #4CAF50; /* Màu xanh lá như ảnh */
+            background-color: var(--primary-blue); /* Đổi sang xanh dương */
+            width: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .side-bar span {
+            transform: rotate(-90deg);
+            color: white;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 14px;
+            white-space: nowrap;
+        }
+
+        /* Nội dung chi tiết bên trong */
+        .info {
+            flex: 1;
+            padding: 20px;
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .info-row {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 16px;
+        }
+
+        .label {
+            color: var(--text-gray);
+            min-width: 80px;
+        }
+
+        .value {
+            font-weight: bold;
+            color: var(--dark-blue);
+        }
+
+        /* Icon trang trí */
+        .icon {
+            font-size: 18px;
+        }
+
+        .name-value {
+            font-size: 18px;
+            text-decoration: underline;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="content" id="thanhvien">
+    <div class="header-title">
+        <span>⚽</span> DANH SÁCH THÀNH VIÊN TEAM ĐÔ NA <span>⚽</span>
+    </div>
+
+    <div class="box">
+        <div class="side-bar"><span>box</span></div>
+        <div class="info">
+            <div class="info-row">
+                <span class="icon">✨</span>
+                <span class="label">Họ tên:</span>
+                <span class="value name-value">Phùng Thị Thuỳ Linh</span>
+            </div>
+            <div class="info-row">
+                <span class="icon">🔹</span>
+                <span class="label">Chức vụ:</span>
+                <span class="value">Thành viên</span>
+            </div>
+            <div class="info-row">
+                <span class="icon">📘</span>
+                <span class="label">Lớp:</span>
+                <span class="value">12A1</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="box">
+        <div class="side-bar"><span>box</span></div>
+        <div class="info">
+            <div class="info-row">
+                <span class="icon">✨</span>
+                <span class="label">Họ tên:</span>
+                <span class="value name-value">Phạm Thị Thanh Trúc</span>
+            </div>
+            <div class="info-row">
+                <span class="icon">🔹</span>
+                <span class="label">Chức vụ:</span>
+                <span class="value">Thành viên</span>
+            </div>
+            <div class="info-row">
+                <span class="icon">📘</span>
+                <span class="label">Lớp:</span>
+                <span class="value">12A1</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="box">
+        <div class="side-bar"><span>box</span></div>
+        <div class="info">
+            <div class="info-row">
+                <span class="icon">✨</span>
+                <span class="label">Họ tên:</span>
+                <span class="value name-value">Đoàn Thị Khánh Ngọc</span>
+            </div>
+            <div class="info-row">
+                <span class="icon">🔹</span>
+                <span class="label">Chức vụ:</span>
+                <span class="value">Thành viên</span>
+            </div>
+            <div class="info-row">
+                <span class="icon">📘</span>
+                <span class="label">Lớp:</span>
+                <span class="value">12A1</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

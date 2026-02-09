@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Nguyễn Quang Hải - The Creative Midfielder</title>
+    <style type="text/css">
+        body {
+            background-color: #eef2f7; /* Nền xanh xám nhạt hiện đại */
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', -apple-system, sans-serif;
+            color: #2d3436;
+        }
+        /* HEADER STYLE MỚI */
+        .header {
+            background: linear-gradient(135deg, #74b9ff, #0984e3); /* Gradient xanh hiện đại */
+            color: #ffffff;
+            padding: 60px 20px;
+            text-align: center;
+            clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%); /* Cắt vát tạo khối hiện đại */
+        }
+        .header h1 {
+                 
+            font-size: 40px;
+            margin: 0;
+            letter-spacing: -1px;
+            font-weight: 800;
+        }
+        .container {
+            max-width: 850px;
+            margin: -40px auto 40px; /* Đè lên header một chút */
+            padding: 0 20px;
+        }
+        /* CARD NỘI DUNG */
+        .content-box {
+            background: #ffffff;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+        }
+        .section-title {
+            color: #0984e3;
+            font-size: 22px;
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+        }
+        .section-title::after {
+            content: "";
+            flex: 1;
+            height: 2px;
+            background: #dfe6e9;
+            margin-left: 15px;
+        }
+        /* STATS GRID */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        .stat-item {
+            background: #f1f7fe;
+            padding: 20px;
+            border-radius: 15px;
+            transition: transform 0.3s ease;
+        }
+        .stat-item:hover {
+            transform: translateY(-5px);
+            background: #e1efff;
+        }
+        .stat-label {
+            display: block;
+            color: #636e72;
+            font-size: 13px;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+        .stat-value {
+            display: block;
+            color: #0984e3;
+            font-size: 18px;
+            font-weight: bold;
+            margin-top: 5px;
+        }
+        /* QUOTE */
+        .quote-card {
+            background: #f9f9f9;
+            border-left: 4px solid #74b9ff;
+            padding: 20px;
+            font-style: italic;
+            margin: 30px 0;
+            color: #4b5a64;
+        }
+        .footer {
+            text-align: center;
+            padding-bottom: 40px;
+            color: #b2bec3;
+            font-size: 13px;
+        }
+        @media (max-width: 600px) {
+            .stats-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <h1>NGUYỄN QUANG HẢI</h1>
+    <p style="opacity: 0.9; font-weight: 300;">Trí tuệ - Kỹ thuật - Đẳng cấp</p>
+</div>
+
+<div class="container">
+    <div class="content-box">
+        <h2 class="section-title">Hồ sơ cá nhân</h2>
+        
+        <div class="stats-grid">
+            <div class="stat-item">
+                <span class="stat-label">Ngày sinh</span>
+                <span class="stat-value">12/04/1997</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-label">Chiều cao</span>
+                <span class="stat-value">1.68m</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-label">Số áo</span>
+                <span class="stat-value">19</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-label">Phong cách</span>
+                <span class="stat-value">Playmaker</span>
+            </div>
+        </div>
+
+        <p style="line-height: 1.8; color: #636e72;">
+            Quang Hải không chỉ là một cầu thủ, anh là một <strong>biểu tượng truyền cảm hứng</strong>. Với đôi chân trái khéo léo, anh đã định nghĩa lại vị thế của bóng đá Việt Nam trên bản đồ châu lục bằng những cú sút xa và khả năng điều tiết trận đấu thông minh.
+        </p>
+
+        <div class="quote-card">
+            "Dù ở bất kỳ hoàn cảnh nào, Quang Hải luôn ra sân với tinh thần của một chiến binh và bộ óc của một nghệ sĩ."
+        </div>
+
+        <h2 class="section-title">Cột mốc đáng nhớ</h2>
+        <ul style="padding-left: 20px; line-height: 2; color: #2d3436;">
+            <li><b>2018:</b> Quả bóng Vàng Việt Nam đầu tiên.</li>
+            <li><b>2019:</b> Lọt vào đội hình tiêu biểu Châu Á.</li>
+            <li><b>2022:</b> Cầu thủ Việt Nam đầu tiên ghi bàn tại giải chuyên nghiệp Pháp.</li>
+            <li><b>Hiện tại:</b> Linh hồn trong lối chơi của Đội tuyển Quốc gia.</li>
+        </ul>
+    </div>
+</div>
+
+<div class="footer">
+</div>
+
+</body>
+</html>

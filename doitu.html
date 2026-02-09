@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Nguyễn Quang Hải: Đời Tư & Tầm Ảnh Hưởng</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <style type="text/css">
+        body {
+            background-color: #f4f7fa; /* Nền xanh xám nhạt */
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', sans-serif;
+            color: #2d3436;
+            line-height: 1.7;
+        }
+
+        /* HEADER */
+        .header {
+            background: linear-gradient(135deg, #74b9ff, #0984e3); /* Gradient xanh */
+            color: #ffffff;
+            padding: 80px 20px 100px; /* Thêm padding dưới */
+            text-align: center;
+            clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%); /* Cắt vát */
+            position: relative;
+            overflow: hidden;
+        }
+        .header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 48px;
+            margin: 0;
+            letter-spacing: 3px;
+            font-style: italic;
+            text-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            position: relative;
+            z-index: 1;
+        }
+        .header p {
+            font-weight: 300;
+            letter-spacing: 1.5px;
+            opacity: 0.9;
+            margin-top: 15px;
+            font-size: 1.1em;
+            position: relative;
+            z-index: 1;
+        }
+        /* Hiệu ứng gợn sóng cho header (thêm phần sinh động) */
+        .header::before {
+            content: '';
+            position: absolute;
+            bottom: -50px; left: 0; right: 0;
+            height: 100px;
+            background: rgba(255,255,255,0.1);
+            transform: skewY(-2deg);
+            z-index: 0;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: -60px auto 60px; /* Đẩy lên che header */
+            padding: 0 20px;
+        }
+
+        .content-box {
+            background: #ffffff;
+            border-radius: 24px;
+            padding: 50px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.08);
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+        .section-title {
+            color: #0984e3;
+            font-size: 24px;
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+            font-weight: 700;
+            letter-spacing: 0.8px;
+            text-transform: uppercase;
+        }
+        .section-title::before {
+            content: "•";
+            color: #74b9ff;
+            font-size: 1.5em;
+            margin-right: 10px;
+            line-height: 0;
+        }
+        .section-title::after {
+            content: "";
+            flex: 1;
+            height: 1px;
+            background: #e0e6ec;
+            margin-left: 20px;
+        }
+        
+        h3 {
+            color: #0d6efd; /* Xanh đậm hơn cho tiêu đề nhỏ */
+            font-size: 1.3em;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            border-left: 3px solid #74b9ff;
+            padding-left: 10px;
+        }
+
+        .paragraph {
+            margin-bottom: 15px;
+            color: #4b5a64;
+            font-weight: 400;
+        }
+
+        .highlight-card {
+            background: #f8fbff;
+            border: 1px solid #eef2f7;
+            border-radius: 12px;
+            padding: 25px;
+            margin-top: 30px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
+        }
+        .highlight-card img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            flex-shrink: 0;
+            border: 3px solid #74b9ff;
+        }
+        .highlight-content {
+            flex-grow: 1;
+        }
+        .highlight-content h4 {
+            color: #0984e3;
+            margin-top: 0;
+            margin-bottom: 10px;
+            font-size: 1.2em;
+        }
+        .highlight-content p {
+            margin: 0;
+            color: #5d6d7e;
+        }
+
+        .image-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+        .gallery-item {
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        .gallery-item:hover {
+            transform: translateY(-8px);
+        }
+        .gallery-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            display: block;
+        }
+        .gallery-item-caption {
+            background: #0984e3;
+            color: #fff;
+            padding: 12px;
+            font-size: 0.9em;
+            text-align: center;
+            font-weight: 500;
+        }
+        
+        .quote-block {
+            background: #eef7ff;
+            border-left: 5px solid #0984e3;
+            padding: 25px;
+            margin: 40px 0;
+            font-style: italic;
+            color: #4b5a64;
+            border-radius: 0 15px 15px 0;
+            font-size: 1.1em;
+        }
+        .quote-block strong {
+            color: #0984e3;
+        }
+
+
+        .footer {
+            text-align: center;
+            padding: 40px;
+            color: #b2bec3;
+            font-size: 12px;
+            letter-spacing: 1px;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 { font-size: 38px; }
+            .content-box { padding: 30px; }
+            .highlight-card { flex-direction: column; text-align: center; }
+            .highlight-card img { margin-bottom: 15px; }
+        }
+        @media (max-width: 480px) {
+            .header h1 { font-size: 30px; }
+            .section-title { font-size: 20px; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <h1>Quang Hải</h1>
+    <p>Hơn cả một cầu thủ - Một biểu tượng truyền cảm hứng</p>
+</div>
+
+<div class="container">
+    <div class="content-box">
+        
+        <div class="section">
+            <h2 class="section-title">Đời tư & Gia đình</h2>
+            <p class="paragraph">
+                Dù là một ngôi sao sáng chói trên sân cỏ, Nguyễn Quang Hải lại là một người khá kín tiếng trong cuộc sống cá nhân. Đối với anh, gia đình luôn là hậu phương vững chắc nhất, là nơi anh tìm thấy sự bình yên và động lực để tiếp tục cống hiến.
+            </p>
+            <h3>Tổ ấm bình yên tại Đông Anh</h3>
+            <p class="paragraph">
+                Sau những giờ tập luyện và thi đấu căng thẳng, Quang Hải luôn dành thời gian để trở về mái nhà thân yêu ở Đông Anh, Hà Nội. Anh đã tự tay xây dựng một căn nhà khang trang cho bố mẹ, thể hiện lòng hiếu thảo và sự quan tâm sâu sắc đến gia đình. Hình ảnh Hải "con" giản dị giúp đỡ bố mẹ việc nhà hay cùng người thân quây quần bên mâm cơm đã trở nên quen thuộc, cho thấy một khía cạnh rất đời thường và ấm áp của ngôi sao bóng đá.
+            </p>
+            <h3>Tình yêu và cuộc sống hôn nhân</h3>
+            <p class="paragraph">
+                Sau những tìm hiểu kỹ càng, Quang Hải đã chính thức về chung một nhà với Chu Thanh Huyền. Cặp đôi nhận được nhiều lời chúc phúc từ người hâm mộ. Chuyện tình của họ, dù trải qua không ít sóng gió, đã đơm hoa kết trái bằng một đám cưới ấm cúng và sự chào đời của thiên thần nhỏ. Đây là minh chứng cho sự trưởng thành và trách nhiệm của nam cầu thủ.
+            </p>
+            <div class="image-gallery">
+                <div class="gallery-item">
+                    <img src="anh1.webp" alt="Quang Hai with family">
+                    <div class="gallery-item-caption">Quang Hải cùng bố mẹ tại quê nhà</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="anh2.jpg" alt="Quang Hai and Chu Thanh Huyen">
+                    <div class="gallery-item-caption">Ảnh cưới lãng mạn của cặp đôi</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Trái tim nhân ái & Hoạt động cộng đồng</h2>
+            <p class="paragraph">
+                Không chỉ tài năng trên sân cỏ, Quang Hải còn sở hữu một trái tim ấm áp và luôn sẵn lòng sẻ chia với cộng đồng. Anh thường xuyên tham gia vào các hoạt động thiện nguyện một cách thầm lặng, ít khi phô trương.
+            </p>
+            <h3>Những hành động ý nghĩa</h3>
+            <ul>
+                <li><strong>Đấu giá áo đấu:</strong> Nhiều lần, Quang Hải đã đấu giá những chiếc áo thi đấu có chữ ký của mình hoặc của toàn đội để gây quỹ ủng hộ đồng bào bị ảnh hưởng bởi thiên tai, quỹ phòng chống dịch bệnh hoặc giúp đỡ các trẻ em có hoàn cảnh khó khăn.</li>
+                <li><strong>Gặp gỡ và truyền cảm hứng:</strong> Anh thường xuyên góp mặt trong các sự kiện bóng đá trẻ em, dành thời gian giao lưu, hướng dẫn và động viên các tài năng nhí. Hình ảnh Quang Hải ân cần chỉ bảo các em nhỏ luôn tạo động lực lớn lao cho thế hệ tương lai của bóng đá Việt Nam.</li>
+                <li><strong>Ủng hộ các quỹ cộng đồng:</strong> Quang Hải cũng là một trong những vận động viên tích cực ủng hộ các quỹ phát triển cộng đồng, góp phần lan tỏa những giá trị tích cực trong xã hội.</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Tầm ảnh hưởng & Biểu tượng</h2>
+            <p class="paragraph">
+                Nguyễn Quang Hải không chỉ là một cầu thủ xuất chúng, anh còn là một biểu tượng, một nguồn cảm hứng to lớn cho giới trẻ Việt Nam và thậm chí cả khu vực.
+            </p>
+            <h3>Định nghĩa lại niềm tin bóng đá Việt</h3>
+            <div class="highlight-card">
+                <img src="anh1.jpg" alt="Inspirational Quang Hai">
+                <div class="highlight-content">
+                    <h4>Vượt qua giới hạn thể hình</h4>
+                    <p>Với chiều cao khiêm tốn 1m68, Quang Hải đã chứng minh rằng tài năng, trí tuệ và sự kiên trì có thể giúp cầu thủ Việt Nam vượt qua mọi rào cản về thể chất. Anh đã xóa tan định kiến về việc cầu thủ Việt không thể cạnh tranh ở tầm quốc tế.</p>
+                </div>
+            </div>
+            <h3>Gương mặt thương hiệu quốc tế</h3>
+            <p class="paragraph">
+                Sức hút của Quang Hải không chỉ dừng lại ở sân cỏ. Với hình ảnh chuyên nghiệp, tài năng vượt trội và đời tư trong sạch, anh đã trở thành đại sứ cho nhiều thương hiệu lớn trong và ngoài nước, góp phần nâng cao giá trị thương hiệu cá nhân cũng như hình ảnh của Việt Nam trên trường quốc tế.
+            </p>
+            <div class="quote-block">
+                "Quang Hải đã chứng minh rằng, không cần thể hình vượt trội, một trái tim nhiệt huyết và khối óc thông minh vẫn có thể tạo nên những điều phi thường. Anh ấy là niềm tự hào của cả một dân tộc." - <strong>Một chuyên gia bóng đá nhận định.</strong>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div class="footer">
+</div>
+
+</body>
+</html>
