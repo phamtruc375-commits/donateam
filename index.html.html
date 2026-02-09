@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Nguyễn Quang Hải - Siêu Sao Bóng Đá</title>
+
+    <style>
+        :root {
+            --primary-blue: #0077b6;
+            --secondary-blue: #00b4d8;
+            --light-blue: #e3f2fd;
+            --dark-blue: #03045e;
+            --white: #ffffff;
+        }
+
+        * {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--light-blue);
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        /* Hiệu ứng hiện ra khi load trang */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* ===== HEADER ===== */
+        .header-section {
+            background: linear-gradient(135deg, var(--white), #bbdefb);
+            margin: 20px;
+            padding: 30px;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 30px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+            animation: fadeIn 0.8s ease-out;
+        }
+
+        .logo img {
+            max-height: 120px;
+            border-radius: 50%;
+            border: 4px solid var(--white);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .title h1 {
+            color: var(--dark-blue);
+            font-size: 32px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* ===== NAVIGATION ===== */
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: var(--primary-blue);
+            margin: 0 20px 20px 20px;
+            border-radius: 50px;
+            padding: 5px;
+            position: sticky;
+            top: 10px;
+            z-index: 100;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        nav a, .dropbtn {
+            color: white;
+            padding: 12px 25px;
+            text-decoration: none;
+            font-weight: 600;
+            border-radius: 30px;
+            transition: 0.3s;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        nav a:hover, .dropdown:hover .dropbtn {
+            background-color: var(--white);
+            color: var(--primary-blue);
+        }
+
+        .dropdown { position: relative; }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background: white;
+            min-width: 160px;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+            margin-top: 5px;
+        }
+        .dropdown-content a { color: var(--primary-blue); border-radius: 0; text-align: left; }
+        .dropdown:hover .dropdown-content { display: block; }
+
+        /* ===== BỐ CỤC 4 Ô ĐỘNG (GRID) ===== */
+        .main-content {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); /* 2 cột cân đối */
+            gap: 25px;
+            margin: 20px;
+            animation: fadeIn 1s ease-out;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .box {
+            background: var(--white);
+            padding: 25px;
+            border-radius: 20px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+            border-bottom: 5px solid var(--secondary-blue);
+            animation: float 4s ease-in-out infinite;
+        }
+
+        /* Làm các ô chuyển động lệch nhịp cho sinh động */
+        .box:nth-child(2) { animation-delay: 0.5s; }
+        .box:nth-child(3) { animation-delay: 1s; }
+        .box:nth-child(4) { animation-delay: 1.5s; }
+
+        .box:hover {
+            animation-play-state: paused; /* Dừng hiệu ứng bay khi di chuột vào */
+            transform: scale(1.03);
+            box-shadow: 0 15px 30px rgba(0, 119, 182, 0.15);
+        }
+
+        .box h2 {
+            color: var(--primary-blue);
+            margin-bottom: 15px;
+            font-size: 22px;
+            border-bottom: 2px solid var(--light-blue);
+            padding-bottom: 10px;
+        }
+
+        .img-grid {
+            display: flex;
+            gap: 10px;
+        }
+        .img-grid img {
+            width: 50%;
+            border-radius: 12px;
+            transition: 0.3s;
+        }
+        .img-grid img:hover { transform: scale(1.05); }
+
+        /* ===== FORM GÓP Ý ===== */
+        .feedback-form {
+            max-width: 600px;
+            margin: 40px auto;
+            background: var(--white);
+            padding: 30px;
+            border-radius: 25px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .feedback-form h2 { text-align: center; color: var(--dark-blue); margin-bottom: 20px; }
+        
+        .feedback-form input, .feedback-form textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border: 2px solid #eee;
+            border-radius: 10px;
+            outline: none;
+        }
+
+        .feedback-form input:focus { border-color: var(--secondary-blue); }
+
+        .form-btns { display: flex; gap: 15px; }
+        .form-btns input {
+            cursor: pointer;
+            font-weight: bold;
+            border: none;
+            transition: 0.3s;
+        }
+        .btn-send { background: var(--primary-blue); color: white; }
+        .btn-send:hover { background: var(--dark-blue); }
+        .btn-reset { background: #eee; }
+
+        /* ===== FOOTER ===== */
+        .footer {
+            background-color: var(--dark-blue);
+            color: white;
+            padding: 30px;
+            text-align: center;
+            border-radius: 40px 40px 0 0;
+            margin-top: 40px;
+        }
+
+        /* Responsive cho điện thoại */
+        @media (max-width: 768px) {
+            .main-content { grid-template-columns: 1fr; }
+            .header-section { flex-direction: column; text-align: center; }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="header-section">
+        <div class="logo">
+            <img src="logoteam.jpg" alt="Logo">
+        </div>
+        <div class="title">
+            <h1>Quang Hải: Chạm bóng, tạo dấu ấn</h1>
+            <p style="color: #666; font-style: italic;">Hành trình của một huyền thoại</p>
+        </div>
+    </div>
+
+<nav>
+    <a href="#home">Trang chủ</a>
+    <a href="file:///C:/Users/PC/Downloads/Teamdona/tieusu.html">Giới thiệu</a>
+    <a href="file:///C:/Users/PC/Downloads/Teamdona/doitu.html">Đời tư</a>
+    <a href="file:///C:/Users/PC/Downloads/Teamdona/bansao.html">Về chúng tôi</a>
+    <a href="https://ngoccs.edu.vn/" target="_blank">Giáo viên hướng dẫn</a>
+</nav>
+    <div class="main-content">
+        <div class="box">
+            <h2>🏆 Thành tựu</h2>
+            <p>• 🏆 Á quân U23 châu Á 2018 cùng U23 Việt Nam (ghi nhiều bàn thắng quan trọng).<p/>
+
+            <p>•🏆 Vô địch AFF Cup 2018 cùng Đội tuyển quốc gia Việt Nam.<p/>
+            <p>•🏆 Huy chương Vàng SEA Games 30 (2019) cùng U22 Việt Nam.<p/>
+
+            <p>•🏆 Nhiều lần vô địch V.League cùng CLB Hà Nội FC.<p/>
+
+            <p>•🥇 Quả bóng Vàng Việt Nam 2018.<p/>
+
+            <p>•⭐ Là trụ cột lâu năm của Đội tuyển quốc gia Việt Nam và Hà Nội FC.<p/>
+
+        </div>
+
+        <div class="box">
+            <h2>📷 Hình ảnh</h2>
+            <div class="img-grid">
+                <img src="anh1.jpg" alt="QH1">
+                <img src="anhquanghai2.jpg" alt="QH2">
+            </div>
+        </div>
+
+        <div class="box">
+            <h2>🎵 Âm nhạc</h2>
+            <p style="margin-bottom: 10px;">Giai điệu truyền cảm hứng:</p>
+            <audio controls src="Nhac1.mp3" style="width: 100%;"></audio>
+        </div>
+
+        <div class="box">
+            <h2>🎬 Video</h2>
+            <video controls width="100%" src="videoquanghai.mp4" style="border-radius: 10px;"></video>
+        </div>
+    </div>
+
+    <div class="feedback-form">
+        <h2>💬 GÓP Ý</h2>
+        <input type="text" placeholder="Họ và tên">
+        <input type="email" placeholder="Email của bạn">
+        <textarea rows="4" placeholder="Ý kiến của bạn..."></textarea>
+        <div class="form-btns">
+            <input type="submit" value="Gửi đi" class="btn-send">
+            <input type="reset" value="Làm mới" class="btn-reset">
+        </div>
+    </div>
+
+    <div class="footer">
+        <p><b>Team: ĐÔ NA</b></p>
+        <p>Lớp 12A1 – THPT Số 2 Nguyễn Bỉnh Khiêm – Gia Lai</p>
+        <p>✉ nakbri3542@gmail.com</p>
+    </div>
+
+</body>
+</html>
